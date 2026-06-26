@@ -2,7 +2,10 @@ site_name: Nelofus's perch
 site_url: https://nelofus2007.github.io/
 theme:
   name: material
+  font: false
 
+extra_css:
+  - stylesheets/extra.css
 
 theme:
   name: material
