@@ -7,6 +7,19 @@ theme:
 extra_css:
   - stylesheets/extra.css
 
+nav:
+  - Home: index.md
+  - Diary: 
+    - Diary/index.md
+    - "2026年":
+      - "6月":
+        - "27日": Diary/2026/06/Day27.md
+
+plugins:
+  - search
+  - encryptcontent:
+        title_prefix: '[LOCKED]'
+
 theme:
   name: material
   language: zh
@@ -24,10 +37,16 @@ theme:
       accent: indigo
       toggle:
         icon: material/weather-night
-        name: 切换到深色模式
+        name: Switch to Dark mode
     - scheme: slate
       primary: indigo
       accent: indigo
       toggle:
         icon: material/weather-sunny
-        name: 切换到浅色模式
+        name: Switch to Light mode
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+
