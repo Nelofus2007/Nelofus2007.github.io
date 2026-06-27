@@ -4,6 +4,10 @@ site_url: https://nelofus2007.github.io/
 extra_css:
   - stylesheets/extra.css
 
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
+
 nav:
   - Home: index.md
   - "EnumerativeComb":
@@ -11,6 +15,12 @@ nav:
     - ElementaryTech:
       - GeneratingFunction:
         - EnumC/ElementaryTech/GeneratingFunction/GF-1_Basic.md
+  - Math:
+    - Math/index.md
+    - Tier1:
+      - MA:
+        - 1-Fundamental:
+          - 1.1 极限: Math/Tier1/MA/1-Fundamental/1-1_Limit.md
   - Diary:
     - Diary/index.md
     - "2026年":
@@ -20,40 +30,41 @@ nav:
 plugins:
   - search
   - encryptcontent:
-    title_prefix: '[LOCKED]'
+      title_prefix: '[LOCKED]'
   - theorem_envs:
-    left_rule: 2px
+      left_rule: 2px
       right_rule: 1px
-top_rule: 0px
-bottom_rule: 0px
+      top_rule: 0px
+      bottom_rule: 0px
 
 theme:
-name: material
-font: false
-language: zh
-features:
-- navigation.tabs
-- navigation.sections
-- navigation.indexes
-- navigation.top
-- search.highlight
-- search.share
-- content.code.copy
-palette:
-- scheme: default
-primary: indigo
-accent: indigo
-toggle:
-icon: material/weather-night
-name: Switch to Dark mode
-- scheme: slate
-primary: indigo
-accent: indigo
-toggle:
-icon: material/weather-sunny
-name: Switch to Light mode
+  name: material
+  font: false
+  language: zh
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.indexes
+    - navigation.top
+    - search.highlight
+    - search.share
+    - content.code.copy
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-night
+        name: Switch to Dark mode
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to Light mode
 
 markdown_extensions:
-- pymdownx.details
-- pymdownx.superfences
-
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.details
+  - pymdownx.superfences
