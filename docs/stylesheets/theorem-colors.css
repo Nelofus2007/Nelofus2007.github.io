@@ -1,0 +1,41 @@
+.md-typeset .thm-color-purple {
+  --thm-frame: #7851a9;
+  --thm-bg: color-mix(in srgb, #7851a9 8%, transparent);
+  --thm-title-color: #5f3f8c;
+}
+
+.md-typeset .thm-color-blue {
+  --thm-frame: #1f5faa;
+  --thm-bg: color-mix(in srgb, #5dade2 8%, transparent);
+  --thm-title-color: #1f5faa;
+}
+
+.md-typeset .thm-color-green {
+  --thm-frame: #228b22;
+  --thm-bg: color-mix(in srgb, #228b22 5%, transparent);
+  --thm-title-color: #1d731d;
+}
+
+.md-typeset .thm-color-sienna {
+  --thm-frame: #965a38;
+  --thm-bg: color-mix(in srgb, #965a38 5%, transparent);
+  --thm-title-color: #7b492e;
+}
+
+.md-typeset .thm-color-strawberry {
+  --thm-frame: #d95b82;
+  --thm-bg: color-mix(in srgb, #d95b82 5%, transparent);
+  --thm-title-color: #b54268;
+}
+
+.md-typeset .thm-color-gray {
+  --thm-frame: #80838a;
+  --thm-bg: color-mix(in srgb, #80838a 6%, transparent);
+  --thm-title-color: var(--md-default-fg-color);
+}
+
+.md-typeset .thm-color-orange {
+  --thm-frame: #d8891c;
+  --thm-bg: color-mix(in srgb, #d8891c 6%, transparent);
+  --thm-title-color: #c07716;
+}

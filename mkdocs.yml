@@ -1,15 +1,17 @@
-site_name: Nelofus's perch
+site_name: Nelofus's Note
 site_url: https://nelofus2007.github.io/
-theme:
-  name: material
-  font: false
 
 extra_css:
   - stylesheets/extra.css
 
 nav:
   - Home: index.md
-  - Diary: 
+  - "EnumerativeComb":
+    - EnumC/index.md
+    - ElementaryTech:
+      - GeneratingFunction:
+        - EnumC/ElementaryTech/GeneratingFunction/GF-1_Basic.md
+  - Diary:
     - Diary/index.md
     - "2026年":
       - "6月":
@@ -18,35 +20,40 @@ nav:
 plugins:
   - search
   - encryptcontent:
-        title_prefix: '[LOCKED]'
+    title_prefix: '[LOCKED]'
+  - theorem_envs:
+    left_rule: 2px
+      right_rule: 1px
+top_rule: 0px
+bottom_rule: 0px
 
 theme:
-  name: material
-  language: zh
-  features:
-    - navigation.tabs
-    - navigation.sections
-    - navigation.indexes
-    - navigation.top
-    - search.highlight
-    - search.share
-    - content.code.copy
-  palette:
-    - scheme: default
-      primary: indigo
-      accent: indigo
-      toggle:
-        icon: material/weather-night
-        name: Switch to Dark mode
-    - scheme: slate
-      primary: indigo
-      accent: indigo
-      toggle:
-        icon: material/weather-sunny
-        name: Switch to Light mode
+name: material
+font: false
+language: zh
+features:
+- navigation.tabs
+- navigation.sections
+- navigation.indexes
+- navigation.top
+- search.highlight
+- search.share
+- content.code.copy
+palette:
+- scheme: default
+primary: indigo
+accent: indigo
+toggle:
+icon: material/weather-night
+name: Switch to Dark mode
+- scheme: slate
+primary: indigo
+accent: indigo
+toggle:
+icon: material/weather-sunny
+name: Switch to Light mode
 
 markdown_extensions:
-  - admonition
-  - pymdownx.details
-  - pymdownx.superfences
+- pymdownx.details
+- pymdownx.superfences
 

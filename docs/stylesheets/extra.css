@@ -1,31 +1,31 @@
-/* Latin serif: Literata */
+/* Latin text: IBM Plex Sans */
 @font-face {
-  font-family: "Literata Local";
-  src: url("../fonts/Literata-Regular.ttf") format("truetype");
+  font-family: "IBM Plex Sans Local";
+  src: url("../fonts/IBMPlexSans-Regular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "Literata Local";
-  src: url("../fonts/Literata-Italic.ttf") format("truetype");
+  font-family: "IBM Plex Sans Local";
+  src: url("../fonts/IBMPlexSans-Italic.ttf") format("truetype");
   font-weight: 400;
   font-style: italic;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "Literata Local";
-  src: url("../fonts/Literata-Bold.ttf") format("truetype");
+  font-family: "IBM Plex Sans Local";
+  src: url("../fonts/IBMPlexSans-Bold.ttf") format("truetype");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "Literata Local";
-  src: url("../fonts/Literata-BoldItalic.ttf") format("truetype");
+  font-family: "IBM Plex Sans Local";
+  src: url("../fonts/IBMPlexSans-BoldItalic.ttf") format("truetype");
   font-weight: 700;
   font-style: italic;
   font-display: swap;
@@ -59,9 +59,9 @@
 
 :root {
   --md-text-font:
-    "Literata Local",
+    "IBM Plex Sans Local",
     "LXGW WenKai Local",
-    serif;
+    sans-serif;
 
   --md-code-font:
     "Cascadia Code Local",
@@ -72,9 +72,9 @@
 body,
 .md-typeset {
   font-family:
-    "Literata Local",
+    "IBM Plex Sans Local",
     "LXGW WenKai Local",
-    serif;
+    sans-serif;
 }
 
 code,
