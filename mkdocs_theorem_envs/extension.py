@@ -16,6 +16,18 @@ HEADER_RE = re.compile(r"^:::\s*([A-Za-z][\w-]*\*?)\s*(.*?)\s*$")
 CLOSE_RE = re.compile(r"^\s*:::\s*$")
 TITLE_RE = re.compile(r'"((?:[^"\\]|\\.)*)"\s*$')
 CLASS_SAFE_RE = re.compile(r"[^a-zA-Z0-9_-]+")
+LATEX_MATH_ESCAPES = {
+    "\\": r"\textbackslash{}",
+    "{": r"\{",
+    "}": r"\}",
+    "$": r"\$",
+    "%": r"\%",
+    "&": r"\&",
+    "#": r"\#",
+    "_": r"\_",
+    "^": r"\^{}",
+    "~": r"\~{}",
+}
 
 
 @dataclass(frozen=True)
@@ -71,6 +83,48 @@ def split_at_close(block: str) -> tuple[str, str, bool]:
     before = "\n".join(lines[:close_at]).strip("\n")
     after = "\n".join(lines[close_at + 1 :]).strip("\n")
     return before, after, True
+
+
+def latex_math_text(value: str) -> str:
+    """Escape plain text so it can live inside a LaTeX math command."""
+
+    return "".join(LATEX_MATH_ESCAPES.get(char, char) for char in value)
+
+
+def latex_label(spec: EnvironmentSpec) -> str:
+    """Return only the environment label as an inline LaTeX expression."""
+
+    return r"\(\mathbf{" + latex_math_text(spec.label) + r"}\)"
+
+
+def title_suffix(
+    spec: EnvironmentSpec,
+    starred: bool,
+    number: str,
+    title: str,
+) -> str:
+    """Return the non-label part of the visible theorem heading."""
+
+    text = ""
+    if spec.numbered and not starred and number:
+        text += " " + number
+    if title:
+        text += f" ({title})"
+    if spec.title_punct:
+        text += spec.title_punct
+
+    return text
+
+
+def plain_title(
+    spec: EnvironmentSpec,
+    starred: bool,
+    number: str,
+    title: str,
+) -> str:
+    """Return a normal HTML title for framed theorem-style boxes."""
+
+    return spec.label + title_suffix(spec, starred, number, title)
 
 
 class TheoremBlockProcessor(BlockProcessor):
@@ -163,25 +217,15 @@ class TheoremBlockProcessor(BlockProcessor):
 
         title_el = etree.SubElement(section, "div")
         title_el.set("class", "thm-title")
-
-        label_el = etree.SubElement(title_el, "span")
-        label_el.set("class", "thm-label")
-        label_el.text = spec.label
-
-        if spec.numbered and not starred and number:
-            number_el = etree.SubElement(title_el, "span")
-            number_el.set("class", "thm-number")
-            number_el.text = number
-
-        if title:
-            name_el = etree.SubElement(title_el, "span")
-            name_el.set("class", "thm-name")
-            name_el.text = title
-
-        if spec.title_punct:
-            punct_el = etree.SubElement(title_el, "span")
-            punct_el.set("class", "thm-punct")
-            punct_el.text = spec.title_punct
+        if spec.framed:
+            title_el.text = plain_title(spec, starred, number, title)
+        else:
+            latex_el = etree.SubElement(title_el, "span")
+            latex_el.set("class", "arithmatex")
+            latex_el.text = AtomicString(latex_label(spec))
+            latex_el.tail = title_suffix(spec, starred, number, title)
+        if not spec.title_break:
+            title_el.tail = " "
 
         body_el = etree.SubElement(section, "div")
         body_el.set("class", "thm-body")

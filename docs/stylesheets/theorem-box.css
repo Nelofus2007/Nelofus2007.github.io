@@ -37,8 +37,11 @@
   display: block;
   margin-bottom: 0.45rem;
   color: var(--thm-title-color);
-  font-weight: 700;
   line-height: 1.45;
+}
+
+.md-typeset .thm-framed .thm-title {
+  font-weight: 700;
 }
 
 .md-typeset .thm-title-inline .thm-title {
@@ -54,39 +57,12 @@
   display: inline;
 }
 
-.md-typeset .thm-title-inline .thm-body > p:first-child::before {
-  content: " ";
-}
-
 .md-typeset .thm-title-inline .thm-body > p:first-child + * {
   margin-top: 1em;
 }
 
-.md-typeset .thm-style-remark .thm-title {
-  font-style: italic;
-  font-weight: 500;
-}
-
 .md-typeset .thm-style-note .thm-title {
   color: var(--thm-title-color);
-}
-
-.md-typeset .thm-number::before {
-  content: "";
-  display: inline-block;
-  width: 0.3em;
-}
-
-.md-typeset .thm-name::before {
-  content: " (";
-}
-
-.md-typeset .thm-name::after {
-  content: ")";
-}
-
-.md-typeset .thm-name {
-  font-weight: inherit;
 }
 
 .md-typeset .thm-body > :first-child {

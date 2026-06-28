@@ -58,6 +58,12 @@
 }
 
 :root {
+  /*
+   * MkDocs Material uses rem units throughout the theme. Lowering the root
+   * size keeps body text, navigation, headings, code, and math in proportion.
+   */
+  font-size: 112.5%;
+
   --md-text-font:
     "IBM Plex Sans Local",
     "LXGW WenKai Local",

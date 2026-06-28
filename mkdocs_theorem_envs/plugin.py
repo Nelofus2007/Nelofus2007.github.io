@@ -89,7 +89,7 @@ DEFAULT_ENVIRONMENTS: dict[str, dict[str, Any]] = {
         "color": "gray",
         "numbered": False,
         "framed": False,
-        "title_break": False,
+        "title_break": True,
         "title_punct": ".",
         "qed": True,
         "qed_symbol": "□",
