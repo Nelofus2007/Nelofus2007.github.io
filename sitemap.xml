@@ -2,14 +2,38 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://nelofus2007.github.io/</loc>
-         <lastmod>2026-06-27</lastmod>
+         <lastmod>2026-06-30</lastmod>
     </url>
     <url>
          <loc>https://nelofus2007.github.io/Diary/</loc>
-         <lastmod>2026-06-27</lastmod>
+         <lastmod>2026-06-30</lastmod>
     </url>
     <url>
          <loc>https://nelofus2007.github.io/Diary/2026/06/Day27/</loc>
-         <lastmod>2026-06-27</lastmod>
+         <lastmod>2026-06-30</lastmod>
+    </url>
+    <url>
+         <loc>https://nelofus2007.github.io/EnumC/</loc>
+         <lastmod>2026-06-30</lastmod>
+    </url>
+    <url>
+         <loc>https://nelofus2007.github.io/EnumC/ElementaryTech/GeneratingFunction/GF-1_Basic/</loc>
+         <lastmod>2026-06-30</lastmod>
+    </url>
+    <url>
+         <loc>https://nelofus2007.github.io/Math/</loc>
+         <lastmod>2026-06-30</lastmod>
+    </url>
+    <url>
+         <loc>https://nelofus2007.github.io/Math/Tier1/AlgF/Overview/</loc>
+         <lastmod>2026-06-30</lastmod>
+    </url>
+    <url>
+         <loc>https://nelofus2007.github.io/Math/Tier1/AlgF/1-PreKnowledge/1-1_Algebra/</loc>
+         <lastmod>2026-06-30</lastmod>
+    </url>
+    <url>
+         <loc>https://nelofus2007.github.io/Math/Tier1/MA/1-Fundamental/1-1_Limit/</loc>
+         <lastmod>2026-06-30</lastmod>
     </url>
 </urlset>

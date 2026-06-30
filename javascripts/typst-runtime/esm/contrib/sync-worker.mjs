@@ -1,0 +1,17 @@
+//! This works on any browser that supports service worker https://jasonformat.com/javascript-sleep/
+//!   See https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerGlobalScope/fetch_event
+//! It is quite important to note that the service worker can only intercept requests that has same origin.
+//! For example, if you have registered this worker with url:
+//!   register('typst.ts/article/sync-worker.js')
+//! This worker will be able to intercept requests that has same origin as the above url:
+//!   typst.ts/article/...
+//! But it will not be able to intercept requests that has different origin:
+//!   typst.ts/book/...
+//!   typst.ts/...
+//! To intercept requests that has different origin, you need to register the worker with url:
+//!   register('typst.ts/sync-worker.js')
+//! or all urls that you want to intercept:
+//!   register('typst.ts/article/sync-worker.js')
+//!   register('typst.ts/book/sync-worker.js')
+export function registerSyncWorker(_workerArgs) { }
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoic3luYy13b3JrZXIubWpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiLi4vLi4vLi4vc3JjL2NvbnRyaWIvc3luYy13b3JrZXIubXRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBLG9HQUFvRztBQUNwRywrRkFBK0Y7QUFDL0YsMkdBQTJHO0FBQzNHLDZEQUE2RDtBQUM3RCxpREFBaUQ7QUFDakQseUZBQXlGO0FBQ3pGLDBCQUEwQjtBQUMxQiw0RUFBNEU7QUFDNUUsdUJBQXVCO0FBQ3ZCLGtCQUFrQjtBQUNsQiw4RkFBOEY7QUFDOUYseUNBQXlDO0FBQ3pDLDJDQUEyQztBQUMzQyxpREFBaUQ7QUFDakQsOENBQThDO0FBRTlDLE1BQU0sVUFBVSxrQkFBa0IsQ0FBQyxXQUFvQixJQUFHLENBQUMiLCJzb3VyY2VzQ29udGVudCI6WyIvLyEgVGhpcyB3b3JrcyBvbiBhbnkgYnJvd3NlciB0aGF0IHN1cHBvcnRzIHNlcnZpY2Ugd29ya2VyIGh0dHBzOi8vamFzb25mb3JtYXQuY29tL2phdmFzY3JpcHQtc2xlZXAvXHJcbi8vISAgIFNlZSBodHRwczovL2RldmVsb3Blci5tb3ppbGxhLm9yZy9lbi1VUy9kb2NzL1dlYi9BUEkvU2VydmljZVdvcmtlckdsb2JhbFNjb3BlL2ZldGNoX2V2ZW50XHJcbi8vISBJdCBpcyBxdWl0ZSBpbXBvcnRhbnQgdG8gbm90ZSB0aGF0IHRoZSBzZXJ2aWNlIHdvcmtlciBjYW4gb25seSBpbnRlcmNlcHQgcmVxdWVzdHMgdGhhdCBoYXMgc2FtZSBvcmlnaW4uXHJcbi8vISBGb3IgZXhhbXBsZSwgaWYgeW91IGhhdmUgcmVnaXN0ZXJlZCB0aGlzIHdvcmtlciB3aXRoIHVybDpcclxuLy8hICAgcmVnaXN0ZXIoJ3R5cHN0LnRzL2FydGljbGUvc3luYy13b3JrZXIuanMnKVxyXG4vLyEgVGhpcyB3b3JrZXIgd2lsbCBiZSBhYmxlIHRvIGludGVyY2VwdCByZXF1ZXN0cyB0aGF0IGhhcyBzYW1lIG9yaWdpbiBhcyB0aGUgYWJvdmUgdXJsOlxyXG4vLyEgICB0eXBzdC50cy9hcnRpY2xlLy4uLlxyXG4vLyEgQnV0IGl0IHdpbGwgbm90IGJlIGFibGUgdG8gaW50ZXJjZXB0IHJlcXVlc3RzIHRoYXQgaGFzIGRpZmZlcmVudCBvcmlnaW46XHJcbi8vISAgIHR5cHN0LnRzL2Jvb2svLi4uXHJcbi8vISAgIHR5cHN0LnRzLy4uLlxyXG4vLyEgVG8gaW50ZXJjZXB0IHJlcXVlc3RzIHRoYXQgaGFzIGRpZmZlcmVudCBvcmlnaW4sIHlvdSBuZWVkIHRvIHJlZ2lzdGVyIHRoZSB3b3JrZXIgd2l0aCB1cmw6XHJcbi8vISAgIHJlZ2lzdGVyKCd0eXBzdC50cy9zeW5jLXdvcmtlci5qcycpXHJcbi8vISBvciBhbGwgdXJscyB0aGF0IHlvdSB3YW50IHRvIGludGVyY2VwdDpcclxuLy8hICAgcmVnaXN0ZXIoJ3R5cHN0LnRzL2FydGljbGUvc3luYy13b3JrZXIuanMnKVxyXG4vLyEgICByZWdpc3RlcigndHlwc3QudHMvYm9vay9zeW5jLXdvcmtlci5qcycpXHJcblxyXG5leHBvcnQgZnVuY3Rpb24gcmVnaXN0ZXJTeW5jV29ya2VyKF93b3JrZXJBcmdzOiB1bmtub3duKSB7fVxyXG4iXX0=

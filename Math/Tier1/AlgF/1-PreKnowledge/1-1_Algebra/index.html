@@ -1,0 +1,1624 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://nelofus2007.github.io/Math/Tier1/AlgF/1-PreKnowledge/1-1_Algebra/">
+      
+      
+        <link rel="prev" href="../../Overview/">
+      
+      
+        <link rel="next" href="../../../../../Diary/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>1.1 何谓代数 - Nelofus's Note</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../stylesheets/extra.css">
+    
+      <link rel="stylesheet" href="../../../../../stylesheets/theorem-box.css">
+    
+      <link rel="stylesheet" href="../../../../../stylesheets/theorem-colors.css">
+    
+      <link rel="stylesheet" href="../../../../../stylesheets/typst.css">
+    
+    <script>__md_scope=new URL("../../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#11" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../../../../.." title="Nelofus&#39;s Note" class="md-header__button md-logo" aria-label="Nelofus's Note" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Nelofus's Note
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              1.1 何谓代数
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to Dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to Dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to Light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to Light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="分享" aria-label="分享" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../EnumC/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  EnumerativeComb
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../../../" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Math
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../Diary/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Diary
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../../.." title="Nelofus&#39;s Note" class="md-nav__button md-logo" aria-label="Nelofus's Note" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Nelofus's Note
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../../EnumC/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    EnumerativeComb
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    EnumerativeComb
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ElementaryTech
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    ElementaryTech
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2_1" id="__nav_2_2_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GeneratingFunction
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    GeneratingFunction
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../EnumC/ElementaryTech/GeneratingFunction/GF-1_Basic/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GF 1 Basic
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Math
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Math
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tier1
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Tier1
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2_1" id="__nav_3_2_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MA / 数学分析
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    MA / 数学分析
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_1_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2_1_1" id="__nav_3_2_1_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1-Fundamental
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_2_1_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2_1_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    1-Fundamental
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../MA/1-Fundamental/1-1_Limit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1.1 极限
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_2_2" id="__nav_3_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AlgF / 代数学基础
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_2_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    AlgF / 代数学基础
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    概述
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_2_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_2_2_2" id="__nav_3_2_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1-PreKnowledge
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_2_2_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_2_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    1-PreKnowledge
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1.1 何谓代数
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1.1 何谓代数
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        三次方程
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        轮换
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../../Diary/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Diary
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Diary
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2026年
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    2026年
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_2_1" id="__nav_4_2_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6月
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    6月
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../Diary/2026/06/Day27/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    [LOCKED]27日
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        三次方程
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        轮换
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="11">§1.1 何谓代数</h1>
+<blockquote>
+<p>Hear your voice gently against the cold</p>
+<p>I watch our shadows softly fold</p>
+<p>Sudden flutters that I feel</p>
+<p>Make this moment feel so real</p>
+</blockquote>
+<h2 id="_1">三次方程</h2>
+<p>让我们跟随对三次方程通解的论述展开.</p>
+<p>快进到辅助方程, 解辅助方程可以知道:</p>
+<div class="arithmatex">\[
+u^3, v^3 = -\frac{q}{2} \pm \frac{\sqrt{-3D}}{2\cdot 3^2}
+\]</div>
+<p>在接下来的公式 1.1.3 中, 我们知道了可以设:</p>
+<div class="arithmatex">\[
+u = \sqrt[3]{-\frac{q}{2} + \frac{\sqrt{-3D}}{2\cdot 3^2}}, v = \sqrt[3]{-\frac{q}{2} - \frac{\sqrt{-3D}}{2\cdot 3^2}}
+\]</div>
+<p>此处看起来很神奇, 解出来的竟然能可以直接满足 <span class="arithmatex">\(u^3v^3 = \qty(-\frac{p}{3})^3\)</span>, 但我们一开始就是将这个代进去才得到的纯 <span class="arithmatex">\(u\)</span> 的方程, 所以并不奇怪.</p>
+<p>接下来<strong>适当的取立方根</strong>, 则可以令 <span class="arithmatex">\(uv=-\frac{p}{3}\)</span>, 从而得到三次方程的解.</p>
+<p>适当的取立方根? 在中学阶段所学实数根语境中, 常常没有"选一个根"的自由, 结果要么唯一, 要么不存在. 然而在复数域中, 这恰有 <span class="arithmatex">\(n\)</span> 个解, 即:</p>
+<section class="thm-box thm-kind-lemma thm-style-plain thm-color-blue thm-framed thm-title-break" style="--thm-left-rule:2px;--thm-right-rule:1px;--thm-top-rule:0px;--thm-bottom-rule:0px">
+<div class="thm-title">Lemma 1.1.1</div>
+<div class="thm-body">
+<p>恰有 <span class="arithmatex">\(n\)</span> 个 <span class="arithmatex">\(z\in \mathbb C\)</span> 满足 <span class="arithmatex">\(z^n = c\)</span>, 其中 <span class="arithmatex">\(c\in \mathbb R \backslash \{0\}\)</span>.</p>
+</div>
+</section>
+<p>这正是本节开头所陈述的代数基本定理告诉我们的事实. 尽管此刻我们还没有定义复数, 但沿用中学所知道的棣莫弗定理, 我们知道, 设复数 <span class="arithmatex">\(z_1 = r_1(\cos \theta_1 + \mathrm{i} \sin \theta_1), z_2 = r_2(\cos \theta_2 + \mathrm{i}\sin \theta_2)\)</span>, 则:</p>
+<div class="arithmatex">\[
+z_1z_2 = r_1r_2(\cos(\theta_1 + \theta_2) + \mathrm{i}\sin(\theta_1 + \theta_2))
+\]</div>
+<p>因此, 若设 <span class="arithmatex">\(\omega_n = \cos\qty(\frac{2\pi}{n}) + \mathrm{i}\sin\qty(\frac{2\pi}{n})\)</span>, 则 <span class="arithmatex">\(\omega_n^n = \cos\qty(2\pi) + \mathrm{i} \sin\qty(2\pi) = 1\)</span>.</p>
+<p>进一步, 我们还有对于任意整数 <span class="arithmatex">\(k\)</span> 总有 <span class="arithmatex">\(\qty(\omega_n^{k})^n = 1\)</span>, 于是我们可以断言:</p>
+<section class="thm-box thm-kind-lemma thm-style-plain thm-color-blue thm-framed thm-title-break" style="--thm-left-rule:2px;--thm-right-rule:1px;--thm-top-rule:0px;--thm-bottom-rule:0px">
+<div class="thm-title">Lemma 1.1.2</div>
+<div class="thm-body">
+<p>若已知 <span class="arithmatex">\(\alpha^n = c\)</span>, 则 <span class="arithmatex">\(z^n = c\)</span> 的所有解必形如 <span class="arithmatex">\(\omega_n^k\alpha\)</span>, 其中 <span class="arithmatex">\(k = 0, 1, \cdots, n-1\)</span>.</p>
+</div>
+</section>
+<p>也就是说, 变化的只有前面的复数部分, 后面的实数部分仅指定长度且在 <span class="arithmatex">\(n\)</span> 个根中都相同, 易于计算. 那么重要的就只有方程 <span class="arithmatex">\(z^n=1\)</span> 的解. 我们称其解为 <span class="arithmatex">\(n\)</span> 次单位根.</p>
+<p>倘若 <span class="arithmatex">\(c \in \mathbb C\)</span>, 情况也不复杂.</p>
+<div class="arithmatex">\[
+z^n = c=r(\cos \theta + \mathrm{i}\sin \theta)\iff \omega_n^k \cdot \sqrt[n]{r}\qty(\cos \qty(\frac{\theta}{n}) + \mathrm{i}\sin \qty(\frac{\theta}{n}))
+\]</div>
+<p>如此再回看书中陈述:</p>
+<blockquote>
+<p>命 <span class="arithmatex">\(\lambda := uv / \qty(-\frac{p}{3})\)</span>, 则 (1.1.3) 表明 <span class="arithmatex">\(\lambda^3=1\)</span>. 以 <span class="arithmatex">\(\lambda^{-1}v\)</span> 代 <span class="arithmatex">\(v\)</span> 或以 <span class="arithmatex">\(\lambda^{-1}u\)</span> 代 <span class="arithmatex">\(u\)</span>, 即可确保 <span class="arithmatex">\(uv=-\frac{p}{3}\)</span>....</p>
+</blockquote>
+<p>这实际上就是微调解得的 <span class="arithmatex">\(u, v\)</span> 前面的 <span class="arithmatex">\(\omega_3\)</span> 的指数罢了. 接下来, 我们都将使用 <span class="arithmatex">\(rho\)</span> 代替 <span class="arithmatex">\(omega_3\)</span> 以贴合书中符号.</p>
+<p>继续向下, 在寻求 <span class="arithmatex">\(X^3 + pX + q=0\)</span> 的所有解时, 书中定义</p>
+<div class="arithmatex">\[
+\rho := \frac{-1+\sqrt{-3}} {2}
+\]</div>
+<p>这实际上就是 <span class="arithmatex">\(\omega_3\)</span>. 右侧的图正是所有三次单位根绘制在单位圆上的样子.</p>
+<p>继续, 可以看到</p>
+<blockquote>
+<p><span class="arithmatex">\(u, \rho u, \rho^2 u\)</span> 和 <span class="arithmatex">\(v, \rho v, \rho^2 v\)</span> 这些立方根可以适当的排序, 记为 <span class="arithmatex">\(u_1, u_2, u_3\)</span> 和 <span class="arithmatex">\(v_1, v_2, v_3\)</span>, 使得 <span class="arithmatex">\(u_iv_i = -\frac{p}{3}\)</span> 对 <span class="arithmatex">\(i=1,2,3\)</span> 皆成立...</p>
+</blockquote>
+<p>考虑显式构造出这个排序. 知 <span class="arithmatex">\(uv = -\frac{p}{3}\)</span>. 因此 <span class="arithmatex">\((\rho u) \cdot (\rho^2 v) = (\rho^2 u)\cdot (\rho v) = \rho^3 \cdot uv = uv\)</span> 即满足条件.</p>
+<div class="typst-block" data-typst-id="1" data-typst-min-width="350" data-typst-width-step="1"><div class="typst-source" hidden>{"source": "#import\"./lib.typ\": *\n#show: setup\n\n#exercise(\"1.1.3\")[\n  请回顾三次方程 $X^3 + p X + q = 0$.\n  1. 尝试验证 $product_(i=1)^3 (X - (u_i + v_i)) = X^3 + p X + q$. 换言之, Cardano 公式的确给出 $X^3 + p X + q$ 的所有根, 计入重数.\n  2. 设 $p, q in RR$. 验证当 $D>0$ 时三根都是实数.\n]\n\n#proof[\n  1. 我们只需展开这个乘积, 设 $r_i = u_i + v_i$.\n\n    $ X^3 - (r_1 + r_2 + r_3)X^2 + (r_1r_2 + r_2r_3 + r_1r_3)X - r_1r_2r_3$\n\n    先是 $X^2$ 的系数, $r_1 + r_2 + r_3$ 显然是 $(1 + \\rho + \\rho^2)(u+v) = 0$.\n\n    讨论 $X$ 的系数, 一项项展开, 先取 $r_1r_2$.\n\n    $ (u_1 + v_1)(u_2 + v_2) = u_1u_2+u_1v_2+v_1u_2+v_1v_2 = u dot.c (rho u) + u dot.c (rho^2 v) + v dot.c (rho u) + v dot.c (rho^2 v) $\n\n    化简得 $rho u^2 + rho^2 v^2 + (rho + rho^2) u v$.\n\n    接下来取 $r_1r_3$, 化简得 $rho^2 u^2 + rho v^2 + (rho + rho^2) u v$.\n\n    $r_2r_3$, 化简得 $rho^3 u^2 + rho^3 v^2 + (rho^4 + rho^2)u v$, 由 $rho^3 = 1$, 即 $u^2 + v^2 + (rho + rho^2)u v$.\n\n    三者相加, 注意到 $u^2$, $v^2$ 的系数都为 $1 + rho + rho^2=0$, $u v$ 的系数为 $rho + rho^2 = -1$.\n\n    故相加得 $-3 u v = -3 dot.c (-frac(p, 3)) = p$.\n\n    常数项则是 $ - r_1r_2r_3 = -(u^3 + v^3) = q$.\n\n  2. 先想一想这个 hint 在干什么. $overline(u_i + v_i) = u_i+v_i$ 实际上就是说虚部为 $0$.\n    \n    我们知道 $overline(u) = v, overline(rho) = rho^2$.\n    \n    因此必有 $overline(u_i) = v_i$. \n    \n    咦, 做完了. $overline(u_i + v_i) = overline(u_i) + overline(v_i) = v_i + u_i$.\n\n    hint 看起来做的有点麻烦, 因为书中并没有像我们前面那样显式的构造出 $u_i, v_i$.\n]"}</div><div class="typst-output" aria-hidden="true"></div></div>
+
+<h2 id="_2">轮换</h2>
+<p>先前我们直接接受了 <span class="arithmatex">\(X = u_i + v_i\)</span> 这样的拆分方式, 现在, 我们将要讨论究竟为什么要进行这样的拆解.</p>
+<p>书中所讨论的根的置换给了一个提示: 通过拆解成 <span class="arithmatex">\(u_i, v_i\)</span> 之和, 我们能得到两个独立的"轨道".</p>
+<p>先计算试试:</p>
+<div class="arithmatex">\[
+u_1 = (x_1 + \rho^2x_2 + \rho x_3)/3, v_1 = (x_1 + \rho x_2 + \rho^2 x_3)/3
+\]</div>
+<p>这就有了 <span class="arithmatex">\(u_1 + v_1 = (2x_1 - x_2 - x_3) / 3\)</span>. 回忆中学所学过的 Vieta's Formula, <span class="arithmatex">\(x_1 + x_2 + x_3\)</span> 应当等于<strong>原方程的二次项系数</strong>. 而由于一开始进行了一步配凑, 这总是 <span class="arithmatex">\(0\)</span>. 所以 <span class="arithmatex">\(u_1 + v_1 = x_1\)</span>.</p>
+<p>后面的几项也是一样的. 这看起来比刚才的"拆分, 然后算出来是对的"有道理多了, 然而还是能更有道理一点.</p>
+<blockquote>
+<p>接下来的内容, 阅读前, 请确保熟悉"轮换"的语言, 且必要时使用纸笔模拟, 充分理解后再看下一行.</p>
+<p>并且, 这一节在接下来的内容中未必重要, 直到 10 章之后才会对这里进行进一步的讨论.</p>
+<p>我已经尽力让语言变得易懂, 且照顾到所有的我想到的细节. 对许多读物中语焉不详的"分不清根的顺序"和"打破对称性"之类的陈述进行了恰当的严谨化. 我有自信采用了一种较好的陈述方式, 但我不保证一定能懂.</p>
+</blockquote>
+<p>现在, 让我们从解方程最基本的内容开始, 更自然的叙述我们刚才得到的解法. 暂且忘掉刚才我们得到的东西!</p>
+<p>要解方程, 首先要明确的便是: 我们容许什么样的操作? 不妨先假设, 我们只允许最基本的<strong>加减乘除</strong>.</p>
+<p>随后, 要问: 我们知道什么? 我们所得到的是方程 <span class="arithmatex">\(X^n + a_1X^{n-1} + \cdots + a_{n-1}X + a_n = 0\)</span>. 知道且仅知道它的系数. 由代数基本定理, 我们知道它必然有 <span class="arithmatex">\(n\)</span> 个根, 不妨设为 <span class="arithmatex">\(r_1, r_2, \cdots, r_n\)</span>. 接下来, Vieta's Formula 可以在根与系数之间建立联系, 即对任意正整数 <span class="arithmatex">\(k\)</span>, 有.</p>
+<div class="arithmatex">\[
+\sum_{1\le i_1 &lt; \cdots &lt; i_k\le n} r_{i_1}\cdots r_{i_k} = (-1)^k a_k
+\]</div>
+<p>那么, 仅仅利用这样的信息, 能够解方程吗? <strong>除了 <span class="arithmatex">\(n=1\)</span> 的情况, 不能</strong>. 除非它是特殊的, 即使 <span class="arithmatex">\(n=2\)</span>.</p>
+<p>以二次的情况为例, 我们可以证明不可能. 考量 <span class="arithmatex">\(X^2 - sX + t = 0\)</span>, Vieta's Formula 告诉我们的是 <span class="arithmatex">\(s = x_1 + x_2, t = x_1 x_2\)</span>.</p>
+<p>可以执行的操作是使用 <span class="arithmatex">\(s, t\)</span> 相互之间任意的加减乘除, 或与常数任意加减乘除, 我们定义进行这样的操作得到的结果是 <span class="arithmatex">\(s\)</span> 和 <span class="arithmatex">\(t\)</span> 的一个<strong>有理函数</strong>. 把所有 <span class="arithmatex">\(s\)</span> 和 <span class="arithmatex">\(t\)</span> 的<strong>有理函数</strong>所形成的宇宙记为 <span class="arithmatex">\(\mathbb Q(s, t)\)</span>. 通过有理函数你可以得到 <span class="arithmatex">\(s + t\)</span>, <span class="arithmatex">\(\qty(\frac{1}{10}s + t^2 - \frac{1}{7}st + 1)\)</span>, 或者 <span class="arithmatex">\(\frac{100s - 57t}{14s + 23t}\)</span> 之类的东西. 数据是随便编的, 不管是什么, 只要它们能够<strong>通过有限次加减乘除</strong>得到就行.</p>
+<p>由于 <span class="arithmatex">\(s, t\)</span> 在交换 <span class="arithmatex">\(x_1, x_2\)</span> 的时候不变(或说, 它们对称). 因此, <span class="arithmatex">\(\mathbb Q(s, t)\)</span> 里的所有式子在交换 <span class="arithmatex">\(x_1, x_2\)</span> 之后都不变. 今设 <span class="arithmatex">\(R(s, t) \in \mathbb Q(s, t)\)</span> 能够表示 <span class="arithmatex">\(x_1\)</span>, 即 <span class="arithmatex">\(R(s, t) = x_1\)</span>, 交换 <span class="arithmatex">\(x_1, x_2\)</span> 后左侧不变, 右侧变为 <span class="arithmatex">\(x_2\)</span>, 于是得到 <span class="arithmatex">\(x_1 = x_2\)</span>. 对于一般情况, 矛盾, 故不可能. 以自然语言来说, "我们没有办法分清 <span class="arithmatex">\(x_1\)</span> 与 <span class="arithmatex">\(x_2\)</span> 的顺序".</p>
+<p>而我们之所以能够解二次方程, 是因为我们引入了根号. 或者更本质的说, 引入了<strong>不对称的东西</strong>. 考虑二次方程的判别式 <span class="arithmatex">\(d^2 = (x_1 - x_2)^2 = s^2-4t\)</span>. 注意, <span class="arithmatex">\(d^2 \in \mathbb Q(s, t)\)</span>, 但是 <span class="arithmatex">\(d = x_1 - x_2\)</span> 不在 <span class="arithmatex">\(\mathbb Q(s, t)\)</span> 中.</p>
+<p>通过加入 <span class="arithmatex">\(d = x_1 - x_2=\sqrt{s^2 - 4t}\)</span>, 我们将 <span class="arithmatex">\(\mathbb Q(s, t)\)</span> 扩充为了 <span class="arithmatex">\(\mathbb Q(s, t, \sqrt{s^2 - 4t})\)</span>. 此时交换 <span class="arithmatex">\(x_1, x_2\)</span> 前后的 <span class="arithmatex">\(R(s, t)\)</span> 不再一定保持值不变. 写出单个根才成为可能: <span class="arithmatex">\(x_1 = \frac{s + d}{2}, x_2 = \frac{s - d}{2}\)</span>.</p>
+<p>因此, 我们是通过<strong>引入额外操作</strong>才能够解决原来所不能解决的问题的.</p>
+<p>那么对于三次方程, 我们也要考虑如何消解其对称性. 仍然考虑 <span class="arithmatex">\(X^3 + pX + q = 0\)</span> 这个化简后的形式. 此时我们已经有 <span class="arithmatex">\(x_1 + x_2 + x_3 = 0\)</span>, 继续使用 Vieta, 得到 <span class="arithmatex">\(p = x_1x_2 + x_2x_3 + x_1x_3, q = -x_1x_2x_3\)</span>.</p>
+<p>此时情况则更进一步, 基于一些未来才会证明的结论, 此刻我们要考虑的变换是三轮换, 即 <span class="arithmatex">\((x_1, x_2, x_3) \rightarrow (x_3, x_1, x_2)\rightarrow (x_2, x_3, x_1)\)</span>. 注意, 其反向也包含在内 <span class="arithmatex">\((x_1, x_2, x_3)\rightarrow (x_2, x_3, x_1)\rightarrow (x_3, x_1, x_2)\)</span>.</p>
+<p>仿照二次的情况, 加入 <span class="arithmatex">\(u = x_1 - x_2, v = x_2 - x_3\)</span>. 两个不对称量, 看起来够表达 <span class="arithmatex">\(x_1, x_2, x_3\)</span> 了. 然而这么取并不行. 因为当前的变换是三轮换, 例如考虑 <span class="arithmatex">\(u=x_1 - x_2\)</span>, 它在 <span class="arithmatex">\((x_1, x_2, x_3)\rightarrow (x_3, x_1, x_2)\)</span> 之后变成了 <span class="arithmatex">\(x_3 - x_1\)</span>, 也就是 <span class="arithmatex">\(-u-v\)</span>.</p>
+<p>我们希望的是它的值变换, 而不是它的式子整个都变了! 例如 <span class="arithmatex">\(R(p, q, u, v) = p + q + u + v\)</span> 在变换之后会变成 <span class="arithmatex">\(p + q - v\)</span>. 我们要的形式是 <span class="arithmatex">\(x_k = R(p, q, u, v)\)</span>, 右侧<strong>结构</strong>变了, 那它就不可能是根的一个稳定表达式.</p>
+<p>所以, 三轮换之后, <span class="arithmatex">\(R(p, q, u, v)\)</span> 应该变成 <span class="arithmatex">\(c \cdot R(p, q, u, v)\)</span>. 这样左右同除就可以把变化放到左边, 让 <span class="arithmatex">\(x_k\)</span> 变成另一个根 <span class="arithmatex">\(x_m\)</span>. 这也正好符合我们轮换做的事情: 交换方程的根.</p>
+<p>可是, 这里的乘法并不能无限乘, 它应该满足一些基本的原则: 三轮换在<strong>三次之后就会变回原来的根排列</strong>, 所以我们乘的数 <span class="arithmatex">\(c\)</span> 必须满足 <span class="arithmatex">\(c^3 = 1\)</span>. 非平凡的 <span class="arithmatex">\(c\)</span> 有且只有 <span class="arithmatex">\(\rho\)</span> 和 <span class="arithmatex">\(\rho^2\)</span>.</p>
+<p>两个值, 刚好够我们凑两个不对称量了. 我们希望 <span class="arithmatex">\(u = k_1 x_1 + k_2 x_2 + k_3 x_3\)</span> 满足 <span class="arithmatex">\(\rho u = k_1 x_2 + k_2 x_3 + k_3 x_1\)</span>, 实验一下, 就可以得到 <span class="arithmatex">\(u = \frac{x_1 + \rho^2x_2 + \rho x_3}{3}\)</span>. 同样, 我们得到 <span class="arithmatex">\(v =\frac{x_1 + \rho x_2 + \rho^2 x_3}{3}\)</span>.</p>
+<p>如此, 进行一次 <span class="arithmatex">\((x_1, x_2, x_3) \rightarrow (x_2, x_3, x_1)\)</span> 对 <span class="arithmatex">\(u, v\)</span> 的作用就是 <span class="arithmatex">\(u \mapsto \rho u, v\mapsto \rho^2 v\)</span>(注意这里轮换的方向, 朝左).</p>
+<p>终于, 我们得到了三次方程的通解! 我们只需回到这一节的开头所给出的内容, 就知道 <span class="arithmatex">\(x_1, x_2, x_3\)</span> 是如何通过我们刚才得到的 <span class="arithmatex">\(u\)</span> 和 <span class="arithmatex">\(v\)</span> 表出的了! 至于如何用系数表出 <span class="arithmatex">\(u,v\)</span>, 这是我们在原书上的 P20 就做过的事.</p>
+<p>想要求解更加高次的方程, 我们需要进一步的了解对称性. 然而我们还没有恰当的语言来描述"对称"这件事, 对更大的情况难以处理, 所以就到此为止.</p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  回到页面顶部
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.sections", "navigation.indexes", "navigation.top", "search.highlight", "search.share", "content.code.copy"], "search": "../../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+    
+    
+      <script src="../../../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../../../../javascripts/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="../../../../../javascripts/typst-loader.js"></script>
+      
+    
+  </body>
+</html>

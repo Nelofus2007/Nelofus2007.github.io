@@ -1,0 +1,56 @@
+.md-typeset .typst-block {
+  margin: 1em 0;
+}
+
+.md-typeset .typst-source {
+  display: none;
+}
+
+.md-typeset .typst-output {
+  min-height: 2.5rem;
+  padding: 0.7rem 0.9rem;
+  border: 1px dashed var(--md-default-fg-color--lighter);
+  color: var(--md-default-fg-color--light);
+  overflow-x: auto;
+}
+
+.md-typeset .typst-status {
+  font-size: 0.8rem;
+}
+
+.md-typeset .typst-block[data-typst-state="pending-viewport"] .typst-output {
+  border-style: dotted;
+  opacity: 0.7;
+}
+
+.md-typeset .typst-block[data-typst-state="rendered"] .typst-output {
+  padding: 0;
+  border: 0;
+  color: inherit;
+  overflow: visible;
+}
+
+/* SVG output from typst.ts is a single inline <svg> element containing
+   vector glyph paths. It scales cleanly to the container width with no
+   rasterization, so we let it fill the output area and let the browser do
+   vector antialiasing at any DPR. */
+.md-typeset .typst-output > svg,
+.md-typeset .typst-page > svg,
+.md-typeset svg.typst-page {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.md-typeset .typst-block[data-typst-state="error"] .typst-output {
+  border-color: var(--md-code-hl-special-color);
+  color: var(--md-code-hl-special-color);
+}
+
+.md-typeset .typst-block[data-typst-state="error"] .typst-status {
+  white-space: pre-wrap;
+  word-break: break-word;
+  font-family: var(--md-code-font-family, monospace);
+  font-size: 0.75rem;
+  line-height: 1.4;
+}

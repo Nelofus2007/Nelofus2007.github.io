@@ -1,0 +1,1728 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://nelofus2007.github.io/Math/Tier1/MA/1-Fundamental/1-1_Limit/">
+      
+      
+        <link rel="prev" href="../../../../">
+      
+      
+        <link rel="next" href="../../../AlgF/Overview/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>1.1 极限 - Nelofus's Note</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../stylesheets/extra.css">
+    
+      <link rel="stylesheet" href="../../../../../stylesheets/theorem-box.css">
+    
+      <link rel="stylesheet" href="../../../../../stylesheets/theorem-colors.css">
+    
+      <link rel="stylesheet" href="../../../../../stylesheets/typst.css">
+    
+    <script>__md_scope=new URL("../../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#11" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../../../../.." title="Nelofus&#39;s Note" class="md-header__button md-logo" aria-label="Nelofus's Note" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Nelofus's Note
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              1.1 极限
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to Dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to Dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to Light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to Light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="分享" aria-label="分享" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../EnumC/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  EnumerativeComb
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../../../" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Math
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../../Diary/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Diary
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../../.." title="Nelofus&#39;s Note" class="md-nav__button md-logo" aria-label="Nelofus's Note" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Nelofus's Note
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../../EnumC/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    EnumerativeComb
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    EnumerativeComb
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ElementaryTech
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    ElementaryTech
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2_1" id="__nav_2_2_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GeneratingFunction
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    GeneratingFunction
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../EnumC/ElementaryTech/GeneratingFunction/GF-1_Basic/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GF 1 Basic
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Math
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Math
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tier1
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Tier1
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_2_1" id="__nav_3_2_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MA / 数学分析
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_2_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    MA / 数学分析
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_1_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_2_1_1" id="__nav_3_2_1_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1-Fundamental
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_2_1_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_2_1_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    1-Fundamental
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1.1 极限
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1.1 极限
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        序列极限
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="序列极限">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#question" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Question?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        完备与否
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        习题
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="习题">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        陈天权 3.1
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2_2" id="__nav_3_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AlgF / 代数学基础
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    AlgF / 代数学基础
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AlgF/Overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    概述
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2_2_2" id="__nav_3_2_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1-PreKnowledge
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_2_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    1-PreKnowledge
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AlgF/1-PreKnowledge/1-1_Algebra/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1.1 何谓代数
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../../../Diary/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Diary
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Diary
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2026年
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    2026年
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_2_1" id="__nav_4_2_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6月
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    6月
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../Diary/2026/06/Day27/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    [LOCKED]27日
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        序列极限
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="序列极限">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#question" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Question?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        完备与否
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        习题
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="习题">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        陈天权 3.1
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="11">§1.1 极限</h1>
+<p>参考为陈天权 3.1, 3.2 两小节, 以及于品的<a href="https://www.bananaspace.org/wiki/%E8%AE%B2%E4%B9%89:%E6%95%B0%E5%AD%A6%E5%88%86%E6%9E%90">讲义</a>.</p>
+<p>文章中将有一部分陈述是从两者的陈述中抄来的. 亦有相当一部分是笔者自己的陈述.</p>
+<h2 id="_1">序列极限</h2>
+<p>我们熟知, 实数列的极限有如下定义.</p>
+<section class="thm-box thm-kind-definition thm-style-definition thm-color-green thm-framed thm-title-break" style="--thm-left-rule:2px;--thm-right-rule:1px;--thm-top-rule:0px;--thm-bottom-rule:0px">
+<div class="thm-title">Definition 1.1.1 (数列极限-1)</div>
+<div class="thm-body">
+<p>我们称实数列 <span class="arithmatex">\(\{a_n\}\)</span> 在 <span class="arithmatex">\(n\rightarrow \infty\)</span> 时趋于(或收敛于)极限 <span class="arithmatex">\(\alpha\)</span>, 当且仅当</p>
+<div class="arithmatex">\[
+\forall \epsilon &gt; 0, \exists N \in \mathbb N, \text{s.t.} \forall n \ge N, a_n \in (\alpha - \epsilon, \alpha + \epsilon)
+\]</div>
+</div>
+</section>
+<p>写作更常见的形式, 即</p>
+<section class="thm-box thm-kind-definition thm-style-definition thm-color-green thm-framed thm-title-break" style="--thm-left-rule:2px;--thm-right-rule:1px;--thm-top-rule:0px;--thm-bottom-rule:0px">
+<div class="thm-title">Definition 1.1.2 (数列极限-2)</div>
+<div class="thm-body">
+<p>我们称实数列 <span class="arithmatex">\(\{a_n\}\)</span> 在 <span class="arithmatex">\(n\rightarrow \infty\)</span> 时趋于(或收敛于)极限 <span class="arithmatex">\(\alpha\)</span>, 当且仅当</p>
+<div class="arithmatex">\[
+\forall \epsilon &gt; 0, \exists N \in \mathbb N, \text{s.t.} \forall n \ge N, |a_n - \alpha| &lt; \epsilon
+\]</div>
+</div>
+</section>
+<p>更改前后的定义在 <span class="arithmatex">\(\mathbb R\)</span> 上显然是等价的, 但后者想要延拓至 <span class="arithmatex">\(\mathbb C\)</span> 上只需将定义上的 <span class="arithmatex">\(\mathbb R\)</span> 改成 <span class="arithmatex">\(\mathbb C\)</span> 即可——绝对值在复数上的自然推广是我们所熟知的模长.</p>
+<p>选择定义时挑选那些更便于推广的总是好的.</p>
+<h3 id="question">Question?</h3>
+<p>极限(看起来)理应是一个数列自身内蕴的性质, 但我们定义一个数列收敛, 即有极限时, 却需要引入一个预知的实数 <span class="arithmatex">\(\alpha\)</span>.</p>
+<p>自然的, 我们应当考虑如何内蕴的考虑极限, 有下列定理:</p>
+<section class="thm-box thm-kind-theorem thm-style-plain thm-color-purple thm-framed thm-title-break" style="--thm-left-rule:2px;--thm-right-rule:1px;--thm-top-rule:0px;--thm-bottom-rule:0px">
+<div class="thm-title">Theorem 1.1.1 (柯西收敛准则)</div>
+<div class="thm-body">
+<p>我们称实数列 <span class="arithmatex">\(\{a_n\}\)</span> 在 <span class="arithmatex">\(n\rightarrow \infty\)</span> 时收敛, 当且仅当</p>
+<div class="arithmatex">\[
+\forall \epsilon &gt; 0, \exists N \in \mathbb N, \text{s.t.} \forall i, j \ge N, |a_i - a_j| &lt; \epsilon
+\]</div>
+<p>我们称这是极限收敛的柯西条件.</p>
+</div>
+</section>
+<section class="thm-box thm-kind-proof thm-style-solution thm-color-gray thm-frameless thm-title-break thm-has-qed" style="--thm-left-rule:2px;--thm-right-rule:1px;--thm-top-rule:0px;--thm-bottom-rule:0px">
+<div class="thm-title"><span class="arithmatex">\(\mathbf{Proof}\)</span>.</div>
+<div class="thm-body">
+<p>先证必要性.</p>
+<p>若实数列 <span class="arithmatex">\(\{a_n\}\)</span> 收敛, 也就是说对于任意 <span class="arithmatex">\(\frac{\epsilon}{2} &gt; 0, \exists N \in \mathbb N, \text{s.t.} \forall n\ge N, |a_n - \alpha| &lt; \frac{\epsilon}{2}\)</span></p>
+<p>熟知对于实数 <span class="arithmatex">\(a, b\)</span>, 有 <span class="arithmatex">\(\lvert a + b\rvert \le \left \lvert \lvert a\rvert + \lvert b\rvert \right \rvert\)</span>, 此即所谓三角不等式.</p>
+<p>即 <span class="arithmatex">\(\forall i, j \ge N\)</span> 有 <span class="arithmatex">\(\lvert a_i - a_j\rvert \le \lvert \lvert a_i - \alpha\rvert  + \lvert \alpha - a_j \rvert \rvert &lt; \frac{\epsilon}{2} + \frac{\epsilon}{2} = \epsilon\)</span>.</p>
+<p>然后证充分性——我们将用到习题中会证明的 Bolzano-Weierstrass Theorem.</p>
+<p>先理清大致的想法: 仅仅使用柯西的条件我们没办法把极限值 <span class="arithmatex">\(\alpha\)</span> 声明出来, 所以我们必须考量一个其他的结构, 使其收敛, 如此得到 <span class="arithmatex">\(\alpha\)</span>. 然后再将原数列中的项与子列中的项进行比较.</p>
+<p>Bolzano-Weierstrass Theorem 言述了"有界序列必有收敛子列", 那么想办法让序列有界, 取出其子列, 就可以得到一个 <span class="arithmatex">\(\alpha\)</span>. 我们只需再证明这个子列收敛的 <span class="arithmatex">\(\alpha\)</span> 是原数列的极限即可, 由于柯西条件, 这看起来是非常可能的. 接下来实现我们的想法.</p>
+<p>设 <span class="arithmatex">\(\{a_n\}\)</span> 为满足柯西条件的数列. 今设我们取 <span class="arithmatex">\(\epsilon = 1\)</span>, 这里可以是任何正实数.</p>
+<p>也就是说 <span class="arithmatex">\(\exists N, \forall i, j\ge N, \lvert a_i - a_j\rvert &lt; 1\)</span>.</p>
+<p>不妨取 <span class="arithmatex">\(i=N\)</span>, 这便是说 <span class="arithmatex">\(\forall j\ge N\)</span>, 总有 <span class="arithmatex">\(\lvert a_N - a_j\rvert \le 1\)</span>, 即 <span class="arithmatex">\(\forall j\ge N, a_j \in (A - \epsilon, A + \epsilon)\)</span>.</p>
+<p>由于有限项的部分必然是有界的, 这正是说原数列必有界. 如此, Bolzano-Weierstrass Theorem 保证我们必能抽出一个子列 <span class="arithmatex">\(\{a_{n_k}\}\)</span> 使得其收敛, 设其极限为 <span class="arithmatex">\(\alpha\)</span>.</p>
+<p>任取一 <span class="arithmatex">\(\epsilon &gt; 0\)</span>, 有 <span class="arithmatex">\(\{a_n\}\)</span> 满足柯西条件, 此即 <span class="arithmatex">\(\exists N_1 \in \mathbb N, \text{s.t.} i, j\ge N_1, \lvert a_i - a_j\rvert &lt; \frac{\epsilon}{2}\)</span>.</p>
+<p>知所取子列收敛, 故对于刚才所取 <span class="arithmatex">\(\epsilon\)</span>, 又有 <span class="arithmatex">\(\exists K \in \mathbb N, \text{s.t.} \forall k &gt; K, \lvert a_{n_k} - \alpha\rvert &lt; \frac{\epsilon}{2}\)</span>.</p>
+<p>取 <span class="arithmatex">\(k\)</span> 同时满足 <span class="arithmatex">\(k&gt; K \land n_k &gt; N_1\)</span>, 依次便有对 <span class="arithmatex">\(\forall n&gt;N_1\)</span>, 必满足:</p>
+<div class="arithmatex">\[
+\lvert a_n - \alpha\rvert \le \lvert \lvert a_n - a_{n_k}\rvert + \lvert a_{n_k} - \alpha \rvert \rvert &lt; \frac{\epsilon}{2} + \frac{\epsilon}{2} = \epsilon
+\]</div>
+<p>依此, 我们便证明了 <span class="arithmatex">\(\lim_{n\rightarrow \infty} a_n = \alpha\)</span>.</p>
+</div>
+<span class="thm-qed">□</span></section>
+<p>满足柯西条件的数列, 称之为柯西列, 上述事实正是说一个实数列收敛当且仅当它是柯西列.</p>
+<p>从直观上, 这当然是等价的. "所有点到某个位置都足够近", 当然和"所有点两两之间的距离都足够近"说的是同一回事, 让我们稍后再证明它.</p>
+<p>既然用数列自身内蕴的性质表示"数列收敛"的尝试成功了, 那么能否同样的, 只使用数列自身的性质表示"数列的极限"到底是什么, 而无需提前预知极限为 <span class="arithmatex">\(\alpha\)</span> ?</p>
+<p>经过简单的尝试, 很容易发现: 在只使用数列本身信息的情况下, 似乎没有某种简单的手段可以简易的表示一个数列的极限是什么, 这促使我们去考虑它的反面. 而有如下的事实表明, 数列的极限并不能被简单的计算出:</p>
+<section class="thm-box thm-kind-lemma thm-style-plain thm-color-blue thm-framed thm-title-break" style="--thm-left-rule:2px;--thm-right-rule:1px;--thm-top-rule:0px;--thm-bottom-rule:0px">
+<div class="thm-title">Lemma (极限的不可计算性)</div>
+<div class="thm-body">
+<p>即使数列 <span class="arithmatex">\(\{a_n\}\)</span> 满足 <span class="arithmatex">\(\forall n, a_n \in \mathbb Q\)</span> 且所有的 <span class="arithmatex">\(a_n\)</span> 都可计算, <span class="arithmatex">\(\displaystyle \lim_{n\rightarrow \infty} a_n\)</span> 仍然可能是不可计算的.</p>
+</div>
+</section>
+<section class="thm-box thm-kind-proof thm-style-solution thm-color-gray thm-frameless thm-title-break thm-has-qed" style="--thm-left-rule:2px;--thm-right-rule:1px;--thm-top-rule:0px;--thm-bottom-rule:0px">
+<div class="thm-title"><span class="arithmatex">\(\mathbf{Proof}\)</span>.</div>
+<div class="thm-body">
+<p>设 <span class="arithmatex">\(K\)</span> 是停机问题集合, 即 <span class="arithmatex">\(K = \{i : 第 i 个图灵机停机\}\)</span>, 此处 <span class="arithmatex">\(i\)</span> 从 <span class="arithmatex">\(0\)</span> 始.</p>
+<p>考量数列:</p>
+<div class="arithmatex">\[
+a_n = \sum_{\begin{gathered} i\le n \\ 第 i 个图灵机在前 n 步停机\end{gathered}} \frac{1}{3^{i+1}}
+\]</div>
+<p>此处选择三进制小数是为了避免二进制下 <span class="arithmatex">\(0.11111\ldots\)</span> 这样的非规范小数带来的混淆.</p>
+<p>显然 <span class="arithmatex">\(a_n\)</span> 单调递增, 有理且有上界. 因此它在 <span class="arithmatex">\(\mathbb R\)</span> 中收敛. 又通过模拟执行可以计算出每一个图灵机是否在前 <span class="arithmatex">\(n\)</span> 步停机, 因此每个 <span class="arithmatex">\(a_n\)</span> 可计算.</p>
+<p>假若极限 <span class="arithmatex">\(\alpha = \lim_{n\rightarrow \infty} a_n\)</span> 为可计算实数, 那么我们就可以用充分高的精度计算 <span class="arithmatex">\(\alpha\)</span> 得到 <span class="arithmatex">\(K\)</span>, 从而判定任意图灵机是否停机, 这与停机问题不可判定矛盾, 故 <span class="arithmatex">\(\alpha\)</span> 不可计算.</p>
+</div>
+<span class="thm-qed">□</span></section>
+<p>这说明了我们引入 <span class="arithmatex">\(\alpha\)</span> 这一行为的必要性.</p>
+<h3 id="_2">完备与否</h3>
+<p>先前我们谈及, 在 <span class="arithmatex">\(\mathbb R\)</span> 内, 极限收敛的原始定义与 Cauchy 收敛准则所给出的定义是等价的. 而于品的讲义中提到:</p>
+<blockquote>
+<p>"...可见, 一个点的序列能否收敛与这个点列所生活的空间的性质密切相关."</p>
+</blockquote>
+<p>围绕这一点, 应当可以展开进一步的论述.</p>
+<p>考察实数列</p>
+<div class="arithmatex">\[
+0.4, 0.41, 0.414, 0.4142, 0.41421, \cdots
+\]</div>
+<p>也就是 <span class="arithmatex">\(\sqrt 2 - 1\)</span> 的十进制小数点前 <span class="arithmatex">\(n\)</span> 位. 在 <span class="arithmatex">\(\mathbb R\)</span> 中此数列的极限显然为 <span class="arithmatex">\(\sqrt 2 - 1\)</span>, 而它的每一项都在 <span class="arithmatex">\(\mathbb Q\)</span> 中.</p>
+<p>在 <span class="arithmatex">\(\mathbb Q\)</span> 中, 显然不存在 <span class="arithmatex">\(\sqrt 2 - 1\)</span> 这个数, 因此按照极限的原始定义, 此数列<strong>不存在极限</strong>. 而若我们对其使用柯西审敛准则, 这数列又显然是一柯西列. 问题何在? 在于极限<strong>不是</strong>数列本身的性质, 它同时依赖于数列本身, 数列所置身的空间, 以及度量结构. 即, 它还与数列所处的距离空间 <span class="arithmatex">\((X, d)\)</span> 有关.</p>
+<p>极限的直接定义强度要高于柯西收敛准则给出的定义, 只有在<strong>完备的度量空间中</strong>, 两个定义才相等. 或者说, 完备的定义就是</p>
+<section class="thm-box thm-kind-definition thm-style-definition thm-color-green thm-framed thm-title-break" style="--thm-left-rule:2px;--thm-right-rule:1px;--thm-top-rule:0px;--thm-bottom-rule:0px">
+<div class="thm-title">Definition 1.1.3 (完备性)</div>
+<div class="thm-body">
+<p>设域 <span class="arithmatex">\(F\)</span> 是一个带有距离 <span class="arithmatex">\(d\)</span> 的域, 则 <span class="arithmatex">\(F\)</span> 完备 <span class="arithmatex">\(\iff\)</span> <span class="arithmatex">\(F\)</span> 中的每一个柯西列都有极限.</p>
+</div>
+</section>
+<p>我们之所以会认为它"有极限, 只是不在 <span class="arithmatex">\(\mathbb Q\)</span> 里", 则是因为我们过于熟悉 <span class="arithmatex">\(\mathbb R\)</span>, 以至于将其当作了思考的基底.</p>
+<p>回首 Cauchy 收敛准则的证明, 其中我们用到了 Bolzano-Weierstrass Theorem, 而 Bolzano-Weierstrass Theorem 的证明又需要<strong>单调有界序列必有极限</strong>这一事实, 这看似平凡, 却是确界原理所保证的! 对于不完备的域, 并不存在这一事实. 这警示我们, 应当时时小心, 有哪些证明偷偷挪用了我们习以为常但并不一定总是成立的假设.</p>
+<h2 id="_3">习题</h2>
+<p>陈天权的习题.</p>
+<h3 id="31">陈天权 3.1</h3>
+<div class="typst-block" data-typst-id="1" data-typst-min-width="350" data-typst-width-step="1"><div class="typst-source" hidden>{"source": "#import \"./lib.typ\": *\n#show: setup\n\n#exercise(\"3.1.4\", \"AM-GM 不等式\")[\n\n]"}</div><div class="typst-output" aria-hidden="true"></div></div>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  回到页面顶部
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../../../..", "features": ["navigation.instant", "navigation.tabs", "navigation.sections", "navigation.indexes", "navigation.top", "search.highlight", "search.share", "content.code.copy"], "search": "../../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+    
+    
+      <script src="../../../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../../../../../javascripts/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="../../../../../javascripts/typst-loader.js"></script>
+      
+    
+  </body>
+</html>

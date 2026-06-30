@@ -1,31 +1,31 @@
-/* Latin serif: Literata */
+/* Latin text: IBM Plex Sans */
 @font-face {
-  font-family: "Literata Local";
-  src: url("../fonts/Literata-Regular.ttf") format("truetype");
+  font-family: "IBM Plex Sans Local";
+  src: url("../fonts/IBMPlexSans-Regular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "Literata Local";
-  src: url("../fonts/Literata-Italic.ttf") format("truetype");
+  font-family: "IBM Plex Sans Local";
+  src: url("../fonts/IBMPlexSans-Italic.ttf") format("truetype");
   font-weight: 400;
   font-style: italic;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "Literata Local";
-  src: url("../fonts/Literata-Bold.ttf") format("truetype");
+  font-family: "IBM Plex Sans Local";
+  src: url("../fonts/IBMPlexSans-Bold.ttf") format("truetype");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "Literata Local";
-  src: url("../fonts/Literata-BoldItalic.ttf") format("truetype");
+  font-family: "IBM Plex Sans Local";
+  src: url("../fonts/IBMPlexSans-BoldItalic.ttf") format("truetype");
   font-weight: 700;
   font-style: italic;
   font-display: swap;
@@ -58,23 +58,36 @@
 }
 
 :root {
+  /*
+   * MkDocs Material uses rem units throughout the theme. Its article body is
+   * 0.8rem, so 125% gives the main reading text a 16px baseline.
+   */
+  font-size: 125%;
+
   --md-text-font:
-    "Literata Local",
+    "IBM Plex Sans Local",
     "LXGW WenKai Local",
-    serif;
+    sans-serif;
 
   --md-code-font:
     "Cascadia Code Local",
     "LXGW WenKai Local",
     monospace;
+
+}
+
+/* MkDocs Material constrains the page through .md-grid. Widening it gives
+   the article column more room while keeping sidebars and navigation intact. */
+.md-grid {
+  max-width: 67rem;
 }
 
 body,
 .md-typeset {
   font-family:
-    "Literata Local",
+    "IBM Plex Sans Local",
     "LXGW WenKai Local",
-    serif;
+    sans-serif;
 }
 
 code,
@@ -85,4 +98,17 @@ kbd,
     "Cascadia Code Local",
     "LXGW WenKai Local",
     monospace;
+}
+
+/* Let text fragments inside MathJax use the site's CJK font. Other math
+   glyphs keep MathJax's own fonts; missing glyphs fall back via unknownFamily
+   in javascripts/mathjax.js. */
+.md-typeset mjx-container mjx-mtext,
+.md-typeset mjx-container mjx-mtext * {
+  font-family:
+    "MJXZERO",
+    "MJXTEX",
+    "LXGW WenKai Local",
+    "LXGW WenKai",
+    sans-serif !important;
 }

@@ -1,0 +1,81 @@
+.md-typeset .thm-box {
+  --thm-frame: var(--md-default-fg-color--light);
+  --thm-bg: var(--md-default-fg-color--lightest);
+  --thm-title-color: var(--md-default-fg-color);
+  --thm-left-rule: 2px;
+  --thm-right-rule: 1px;
+  --thm-top-rule: 0px;
+  --thm-bottom-rule: 0px;
+
+  position: relative;
+  margin: 0.85em 0;
+  padding: 0.72rem 0.95rem;
+  overflow: hidden;
+  border-color: var(--thm-frame);
+  border-style: solid;
+  border-width:
+    var(--thm-top-rule)
+    var(--thm-right-rule)
+    var(--thm-bottom-rule)
+    var(--thm-left-rule);
+  border-radius: 0;
+  background: var(--thm-bg);
+}
+
+.md-typeset .thm-frameless {
+  padding: 0;
+  overflow: visible;
+  border-width: 0;
+  background: transparent;
+}
+
+.md-typeset .thm-starred {
+  border-radius: 0.35rem;
+}
+
+.md-typeset .thm-title {
+  display: block;
+  margin-bottom: 0.45rem;
+  color: var(--thm-title-color);
+  line-height: 1.45;
+}
+
+.md-typeset .thm-framed .thm-title {
+  font-weight: 700;
+}
+
+.md-typeset .thm-title-inline .thm-title {
+  display: inline;
+  margin: 0;
+}
+
+.md-typeset .thm-title-inline .thm-body {
+  display: inline;
+}
+
+.md-typeset .thm-title-inline .thm-body > p:first-child {
+  display: inline;
+}
+
+.md-typeset .thm-title-inline .thm-body > p:first-child + * {
+  margin-top: 1em;
+}
+
+.md-typeset .thm-style-note .thm-title {
+  color: var(--thm-title-color);
+}
+
+.md-typeset .thm-body > :first-child {
+  margin-top: 0;
+}
+
+.md-typeset .thm-body > :last-child {
+  margin-bottom: 0;
+}
+
+.md-typeset .thm-qed {
+  display: block;
+  margin-top: 0.45rem;
+  text-align: right;
+  line-height: 1;
+}
