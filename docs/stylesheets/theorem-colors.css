@@ -10,6 +10,12 @@
   --thm-title-color: #1f5faa;
 }
 
+.md-typeset .thm-color-ultramarine {
+  --thm-frame: #3f37c9;
+  --thm-bg: color-mix(in srgb, #3f37c9 5%, transparent);
+  --thm-title-color: #312aa6;
+}
+
 .md-typeset .thm-color-green {
   --thm-frame: #228b22;
   --thm-bg: color-mix(in srgb, #228b22 5%, transparent);

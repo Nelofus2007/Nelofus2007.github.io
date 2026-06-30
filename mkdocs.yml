@@ -18,9 +18,13 @@ nav:
   - Math:
     - Math/index.md
     - Tier1:
-      - MA:
+      - MA / 数学分析:
         - 1-Fundamental:
           - 1.1 极限: Math/Tier1/MA/1-Fundamental/1-1_Limit.md
+      - AlgF / 代数学基础:
+        - 概述: Math/Tier1/AlgF/Overview.md
+        - 1-PreKnowledge:
+          - 1.1 何谓代数: Math/Tier1/AlgF/1-PreKnowledge/1-1_Algebra.md
   - Diary:
     - Diary/index.md
     - "2026年":
@@ -36,12 +40,15 @@ plugins:
       right_rule: 1px
       top_rule: 0px
       bottom_rule: 0px
+  - typst_ts:
+      width_step: 1
 
 theme:
   name: material
   font: false
   language: zh
   features:
+    - navigation.instant
     - navigation.tabs
     - navigation.sections
     - navigation.indexes

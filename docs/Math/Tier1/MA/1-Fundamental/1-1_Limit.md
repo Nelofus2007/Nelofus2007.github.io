@@ -36,7 +36,7 @@ $$
 
 ### Question?
 
-极限(看起来)理应是一个数列自身内蕴的性质, 但我们定义一个数列收敛, 即有极限时, 却不得不引入一个外在的实数 $\alpha$.
+极限(看起来)理应是一个数列自身内蕴的性质, 但我们定义一个数列收敛, 即有极限时, 却需要引入一个预知的实数 $\alpha$.
 
 自然的, 我们应当考虑如何内蕴的考虑极限, 有下列定理:
 
@@ -77,7 +77,7 @@ Bolzano-Weierstrass Theorem 言述了"有界序列必有收敛子列", 那么想
 
 知所取子列收敛, 故对于刚才所取 $\epsilon$, 又有 $\exists K \in \mathbb N, \text{s.t.} \forall k > K, \lvert a_{n_k} - \alpha\rvert < \frac{\epsilon}{2}$.
 
-取 $k$ 同时满足 $k> K \land n_k > N_1$, 依次便有对 $n>N_1$, 必满足:
+取 $k$ 同时满足 $k> K \land n_k > N_1$, 依次便有对 $\forall n>N_1$, 必满足:
 
 $$
 \lvert a_n - \alpha\rvert \le \lvert \lvert a_n - a_{n_k}\rvert + \lvert a_{n_k} - \alpha \rvert \rvert < \frac{\epsilon}{2} + \frac{\epsilon}{2} = \epsilon
@@ -104,7 +104,7 @@ $$
 考量数列:
 
 $$
-a_n = \sum_{i\le n \\ 第 i 个图灵机在前 n 步停机} \frac{1}{3^{i+1}}
+a_n = \sum_{\begin{gathered} i\le n \\ 第 i 个图灵机在前 n 步停机\end{gathered}} \frac{1}{3^{i+1}}
 $$
 
 此处选择三进制小数是为了避免二进制下 $0.11111\ldots$ 这样的非规范小数带来的混淆.
@@ -149,3 +149,12 @@ $$
 陈天权的习题.
 
 ### 陈天权 3.1
+
+```typst
+#import "./lib.typ": *
+#show: setup
+
+#exercise("3.1.4", "AM-GM 不等式")[
+
+]
+```

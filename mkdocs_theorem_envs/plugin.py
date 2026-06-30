@@ -59,6 +59,18 @@ DEFAULT_ENVIRONMENTS: dict[str, dict[str, Any]] = {
         "color": "strawberry",
         "numbered": True,
     },
+    "exercise": {
+        "label": "Exercise",
+        "style": "definition",
+        "color": "ultramarine",
+        "numbered": True,
+    },
+    "excercise": {
+        "label": "Exercise",
+        "style": "definition",
+        "color": "ultramarine",
+        "numbered": True,
+    },
     "remark": {
         "label": "Remark",
         "style": "remark",

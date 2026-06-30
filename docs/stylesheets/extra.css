@@ -59,10 +59,10 @@
 
 :root {
   /*
-   * MkDocs Material uses rem units throughout the theme. Lowering the root
-   * size keeps body text, navigation, headings, code, and math in proportion.
+   * MkDocs Material uses rem units throughout the theme. Its article body is
+   * 0.8rem, so 125% gives the main reading text a 16px baseline.
    */
-  font-size: 112.5%;
+  font-size: 125%;
 
   --md-text-font:
     "IBM Plex Sans Local",
@@ -73,6 +73,13 @@
     "Cascadia Code Local",
     "LXGW WenKai Local",
     monospace;
+
+}
+
+/* MkDocs Material constrains the page through .md-grid. Widening it gives
+   the article column more room while keeping sidebars and navigation intact. */
+.md-grid {
+  max-width: 67rem;
 }
 
 body,
@@ -91,4 +98,17 @@ kbd,
     "Cascadia Code Local",
     "LXGW WenKai Local",
     monospace;
+}
+
+/* Let text fragments inside MathJax use the site's CJK font. Other math
+   glyphs keep MathJax's own fonts; missing glyphs fall back via unknownFamily
+   in javascripts/mathjax.js. */
+.md-typeset mjx-container mjx-mtext,
+.md-typeset mjx-container mjx-mtext * {
+  font-family:
+    "MJXZERO",
+    "MJXTEX",
+    "LXGW WenKai Local",
+    "LXGW WenKai",
+    sans-serif !important;
 }

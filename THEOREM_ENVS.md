@@ -56,6 +56,7 @@ $$(a+b)^2 = a^2 + 2ab + b^2.$$
 | `definition` | Definition | definition | green | 是 | 是 | 否 |
 | `example` | Example | definition | sienna | 是 | 是 | 否 |
 | `problem` | Problem | definition | strawberry | 是 | 是 | 否 |
+| `exercise` | Exercise | definition | ultramarine | 是 | 是 | 否 |
 | `remark` | Remark | remark | gray | 是 | 否 | 否 |
 | `note` | Note | note | orange | 是 | 否 | 否 |
 | `solution` | Solution | solution | gray | 是 | 否 | 是 |
@@ -63,6 +64,9 @@ $$(a+b)^2 = a^2 + 2ab + b^2.$$
 
 其中 `proof` 对应 `amsthm` 的 proof 效果：无框，默认显示为
 `Proof.`，正文直接接在后面，末尾右侧显示方块。
+
+`excercise` 作为 `exercise` 的兼容别名可用，但推荐使用正确拼写
+`exercise`。
 
 ## 插件配置
 
